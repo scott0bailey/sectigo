@@ -1,7 +1,7 @@
 # Needs to be run once time pwer server
 # Install posh acme
+Install-Module -Name Posh-ACME -Scope CurrentUser
 Install-Module -Name Posh-ACME.Deploy -Scope CurrentUser
-Install-Module PANOShell -scope CurrentUser
 
 # Register acme account
 $eabKID = '<eab>'
