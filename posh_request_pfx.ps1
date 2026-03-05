@@ -1,3 +1,4 @@
+# Must register posh acme account prior to running this (posh_register_acme.ps1)
 # 1. Gather Inputs
 $domainName = Read-Host "Enter the Main Domain (CN)"
 $sanInput = Read-Host "Enter any SAN names (comma-separated, or leave blank)"
