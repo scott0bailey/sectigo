@@ -6,7 +6,7 @@
 ## Environment variables for EAB and Sectigo ACME endpoint
 export EAB_KID="<eab_kid>"
 export EAB_HMAC_KEY="<eab_hmac_key>"
-export SECTIGO_ACME="<sectigo_acme_directory_url>"
+export SECTIGO_ACME="https://acme.enterprise.sectigo.com"
 ## Register ACME Account with EAB
 acme.sh --register-account \
   --server "${SECTIGO_ACME}" \
