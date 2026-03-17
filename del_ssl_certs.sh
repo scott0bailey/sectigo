@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 import requests
 
-# ids.txt should be in the same directory as the script and be one line per
+# ids.txt file must be in the same directory as the script and be one line per
+# chmod +x del_ssl_certs.sh
+# ./del_ssl_certs.sh
+#
 # Change this to the correct DELETE endpoint you need
-# Example for deleting an SSL cert in legacy SCM:
+# Example for deleting an SSL cert in SCM:
 # url = "https://cert-manager.com/api/ssl/v1/"
 #
 # If you are deleting *device* certificates instead:
 # url = "https://cert-manager.com/api/device/v1/"
 #
-# Just append the ID afterward.
 url = "https://cert-manager.com/api/ssl/v1/"
 
 headers = {
-    'login': '',
-    'password': '',
-    'customerUri': '',
+    'login': '<username>',
+    'password': '<password>',
+    'customerUri': '<URI>',
 }
 
 with open('ids.txt', 'r') as file:
