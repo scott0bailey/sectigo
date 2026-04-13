@@ -1,0 +1,14 @@
+{
+    email admin@example.com
+
+    acme_ca https://acme.enterprise.sectigo.com
+
+    acme_eab {
+        key_id {$EAB_KID}
+        mac_key {$EAB_HMAC_KEY}
+    }
+}
+
+example.com {
+    reverse_proxy app:443
+}
