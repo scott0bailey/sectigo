@@ -1,0 +1,34 @@
+- hosts: localhost
+#  remote_user: root
+  connection: local
+  become: true
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    sectigo_cm_user: ""
+    sectigo_cm_password: ""
+    sectigo_cm_uri: "sectigose-na"
+    sectigo_cm_org_id: 41677
+    sectigo_cm_base_url: "https://cert-manager.com/api/ssl/v1"
+
+    sectigo_csr_subject: "C=US/ST=FL/L=Orlando/O=Baileys/OU=SEs/CN=domain.sectigo.com/emailAddress=scott.bailey@sectigo.com"
+    sectigo_csr_domain: "ansible.sectigo.lab"
+    sectigo_ssl_cert_subject_alt_names: ['san.sectigo.com']
+
+    sectigo_ssl_cert_comments: "Test certificate for Sectigo"
+
+    sectigo_ssl_cert_type: 63139
+
+    sectigo_ssl_cert_file_path: "/tmp/ssl/mycerts"
+    sectigo_ssl_cert_file_name: "ansible.role"
+
+    sectigo_ssl_cert_validity: 7
+    sectigo_ssl_cert_expiry_window: 3
+
+    sectigo_ssl_cert_format_type: x509
+    sectigo_ssl_cert_num_servers: 1
+    sectigo_ssl_cert_server_type: -1
+    sectigo_auto_renew: true
+    sectigo_max_timeout: 600
+    sectigo_loop_period: 30
+  roles:
+    - sectigo_ansible
