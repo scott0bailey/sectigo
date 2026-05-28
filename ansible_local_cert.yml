@@ -19,7 +19,7 @@
     sectigo_ssl_cert_type: 63139
 
     sectigo_ssl_cert_file_path: "/tmp/ssl/mycerts"
-    sectigo_ssl_cert_file_name: "ansible.role"
+    sectigo_ssl_cert_file_name: "ansible.cert"
 
     sectigo_ssl_cert_validity: 7
     sectigo_ssl_cert_expiry_window: 3
